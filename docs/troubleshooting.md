@@ -180,3 +180,15 @@ More information:
 ### Kubeconfig
 If you want to use a kubeconfig file for authentication, follow the deploy procedure and 
 add the flag `--kubeconfig=/etc/kubernetes/kubeconfig.yaml` to the deployment
+
+### Error CrashLoopBackOff
+
+Remove flannel,
+
+installl calico with the following command:
+
+```
+kubectl apply -f https://docs.projectcalico.org/v3.2/getting-started/kubernetes/installation/hosted/etcd.yaml
+kubectl apply -f https://docs.projectcalico.org/v3.2/getting-started/kubernetes/installation/rbac.yaml
+kubectl apply -f https://docs.projectcalico.org/v3.2/getting-started/kubernetes/installation/hosted/calico.yaml
+```
